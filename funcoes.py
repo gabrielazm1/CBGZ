@@ -5,5 +5,5 @@ def rolar_dados(n):
     while i < n:
         x = random.randint(1,6)
         lista.append(x)
-    i = i + 1
+        i = i + 1
     return lista
