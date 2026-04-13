@@ -19,4 +19,10 @@ def guardar_dado (dados_rolados,dados_no_estoque,dado_para_guardar):
 
     return [nova_lista, dados_no_estoque]
 
-            
+def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
+    nova_lista = []
+    dados_rolados.append(dados_no_estoque[dado_para_remover])
+    del dados_no_estoque[dado_para_remover]
+    nova_lista.append(dados_rolados)
+    nova_lista.append(dados_no_estoque)
+    return nova_lista
