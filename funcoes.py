@@ -26,3 +26,9 @@ def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
     nova_lista.append(dados_rolados)
     nova_lista.append(dados_no_estoque)
     return nova_lista
+
+def calcula_pontos_regra_simples (listadados):
+    dic = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    for i in range (len(listadados)):
+        dic[listadados[i]] = dic[listadados[i]] + listadados[i]
+    return dic
