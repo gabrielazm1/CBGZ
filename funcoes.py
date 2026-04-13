@@ -32,3 +32,10 @@ def calcula_pontos_regra_simples (listadados):
     for i in range (len(listadados)):
         dic[listadados[i]] = dic[listadados[i]] + listadados[i]
     return dic
+
+def calcula_pontos_soma(listadados):
+    soma = 0
+    for i in range(len(listadados)):
+        soma = soma + listadados[i]
+    return soma
+        
