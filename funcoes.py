@@ -49,3 +49,14 @@ def calcula_pontos_sequencia_baixa(listadados):
         if contador == 4:
             return 15
     return 0
+
+
+def calcula_pontos_sequencia_alta(listadados):
+    for i in range(1, 5):
+        contador = 0
+        for numero in range(i, i + 5):
+            if numero in listadados:
+                contador = contador + 1
+        if contador == 5:
+            return 30
+    return 0
