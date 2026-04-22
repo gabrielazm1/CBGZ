@@ -92,3 +92,13 @@ def calcula_pontos_quadra(listadados):
                     soma = soma + dado 
                 return soma 
     return 0
+
+def calcula_pontos_quina(listadados):
+    for v1 in listadados: 
+        qtd1 = 0          
+        for dado in listadados: 
+            if dado == v1: 
+                qtd1 = qtd1 + 1 
+            if qtd1 == 5 :
+                return 50 
+    return 0
