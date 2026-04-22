@@ -39,3 +39,13 @@ def calcula_pontos_soma(listadados):
         soma = soma + listadados[i]
     return soma
         
+
+def calcula_pontos_sequencia_baixa(listadados):
+    for i in range(1, 4):
+        contador = 0
+        for numero in range(i, i + 4):
+            if numero in listadados:
+                contador = contador + 1
+        if contador == 4:
+            return 15
+    return 0
