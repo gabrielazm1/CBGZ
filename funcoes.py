@@ -60,3 +60,21 @@ def calcula_pontos_sequencia_alta(listadados):
         if contador == 5:
             return 30
     return 0
+
+def calcula_pontos_full_house(listadados):
+    soma = 0
+    for v1 in listadados: 
+        for v2 in listadados:
+            if v1 != v2:
+                qtd1 = 0 
+                qtd2 = 0 
+                for dado in listadados: 
+                    if dado == v1: 
+                        qtd1 = qtd1 + 1 
+                    if dado == v2: 
+                        qtd2 = qtd2 +  1 
+                if qtd1 == 3 and qtd2 == 2: 
+                    for dado in listadados: 
+                        soma = soma + dado 
+                    return soma 
+    return 0 
