@@ -78,3 +78,17 @@ def calcula_pontos_full_house(listadados):
                         soma = soma + dado 
                     return soma 
     return 0 
+
+
+def calcula_pontos_quadra(listadados):
+    soma = 0
+    for v1 in listadados: 
+        qtd1 = 0          
+        for dado in listadados: 
+            if dado == v1: 
+                qtd1 = qtd1 + 1 
+            if qtd1 == 4 :
+                for dado in listadados: 
+                    soma = soma + dado 
+                return soma 
+    return 0
