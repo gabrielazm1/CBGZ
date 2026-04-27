@@ -112,3 +112,17 @@ def calcula_pontos_regra_avancada(listadados):
             'sem_combinacao' :calcula_pontos_soma(listadados),
             'sequencia_alta' : calcula_pontos_sequencia_alta(listadados),
             'sequencia_baixa' :calcula_pontos_sequencia_baixa(listadados)}
+
+def faz_jogada(listadados, categoria, cartela):
+    pontossimples = calcula_pontos_regra_simples(listadados)
+    postosavancado = calcula_pontos_regra_avancada(listadados)
+
+    psimples = cartela["regra_simples"]
+    pavancada = cartela["regra_avancada"]
+
+    if categoria in pavancada:
+        pavancada[categoria] = postosavancado[categoria]
+    elif int(categoria) in psimples:
+        psimples[int(categoria)] = pontossimples[int(categoria)]
+
+    return cartela
